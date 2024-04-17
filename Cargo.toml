@@ -1,0 +1,22 @@
+[package]
+name = "dyn-error"
+version = "0.1.0"
+authors = ["Gianluca Costa <gianluca@gianlucacosta.info>"]
+edition = "2021"
+description = "Macros for dynamic errors"
+repository = "https://github.com/giancosta86/dyn-error"
+license = "MIT"
+keywords = ["error", "dynamic", "equality", "conversion", "macros"]
+categories = []
+include = [
+    "LICENSE",
+    "README.md",
+    "/benches/",
+    "/examples/",
+    "/src/",
+    "/tests/",
+]
+
+[dev-dependencies]
+pretty_assertions = "1.4.0"
+speculate2 = "0.2"
