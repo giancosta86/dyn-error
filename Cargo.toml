@@ -1,6 +1,6 @@
 [package]
 name = "dyn-error"
-version = "0.1.0"
+version = "0.1.1"
 authors = ["Gianluca Costa <gianluca@gianlucacosta.info>"]
 edition = "2021"
 description = "Macros for dynamic errors"
