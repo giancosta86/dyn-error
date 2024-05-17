@@ -7,7 +7,7 @@ description = "Macros for dynamic errors"
 repository = "https://github.com/giancosta86/dyn-error"
 license = "MIT"
 keywords = ["error", "dynamic", "equality", "conversion", "macros"]
-categories = []
+categories = ["rust-patterns"]
 include = [
     "LICENSE",
     "README.md",
@@ -20,3 +20,6 @@ include = [
 [dev-dependencies]
 pretty_assertions = "1.4.0"
 speculate2 = "0.2"
+
+[package.metadata.docs.rs]
+all-features = true
