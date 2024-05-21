@@ -1,12 +1,12 @@
 [package]
 name = "dyn-error"
-version = "0.1.1"
+version = "0.2.0"
 authors = ["Gianluca Costa <gianluca@gianlucacosta.info>"]
 edition = "2021"
-description = "Macros for dynamic errors"
+description = "Error-related utilites for Rust"
 repository = "https://github.com/giancosta86/dyn-error"
 license = "MIT"
-keywords = ["error", "dynamic", "equality", "conversion", "macros"]
+keywords = ["error", "utilities", "boxed", "dyn"]
 categories = ["rust-patterns"]
 include = [
     "LICENSE",
@@ -16,10 +16,6 @@ include = [
     "/src/",
     "/tests/",
 ]
-
-[dev-dependencies]
-pretty_assertions = "1.4.0"
-speculate2 = "0.2"
 
 [package.metadata.docs.rs]
 all-features = true
