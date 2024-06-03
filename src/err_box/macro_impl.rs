@@ -1,4 +1,4 @@
-/// Macro that internally calls [assert_err_box](crate::assert_err_box),
+/// Macro that internally calls [check_err_box](crate::check_err_box),
 /// issuing [panic] in case of failure.
 ///
 /// If the actual error is equal to the expected error, the macro has no effects:
@@ -54,7 +54,7 @@
 /// assert_err_box!(result, MyErr(7));
 /// ```
 ///
-/// Of course, the macro panics if the boxed error is of a non-castable type:
+/// Of course, the macro panics if the boxed error and the expected error belong to incompatible types:
 ///
 /// ```should_panic
 /// use dyn_error::*;
@@ -86,7 +86,7 @@
 /// assert_err_box!(result, AlphaErr(90));
 /// ```
 ///
-/// Finally, the function fails also if the result is just [Ok]:
+/// Finally, the macro panics also if the result is just [Ok]:
 ///
 /// ```should_panic
 /// use dyn_error::*;

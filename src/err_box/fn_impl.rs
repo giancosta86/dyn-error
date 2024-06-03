@@ -1,7 +1,7 @@
 use crate::ErrBoxCheckFailure;
 use std::error::Error;
 
-/// Easily tests whether the given [Result] is actually
+/// Tests whether the given [Result] is actually
 /// an [Err] with a [Box] containing an [Error] implementation
 /// equal to the *expected* instance:
 ///
@@ -72,7 +72,7 @@ use std::error::Error;
 /// );
 /// ```
 ///
-/// Of course, the check also fails if the boxed error is of an unrelated type:
+/// Of course, the check also fails if the boxed error and the expected error belong to unrelated types:
 ///
 /// ```
 /// use dyn_error::*;
