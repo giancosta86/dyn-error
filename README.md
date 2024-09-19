@@ -2,8 +2,7 @@
 
 _Error-related utilites for Rust_
 
-[![CI](https://github.com/giancosta86/dyn-error/actions/workflows/publish-to-crates.yml/badge.svg)](https://github.com/giancosta86/dyn-error/actions/workflows/publish-to-crates.yml)
-![Crates.io Version](https://img.shields.io/crates/v/dyn-error?style=flat&logo=rust)
+[![Crates.io Version](https://img.shields.io/crates/v/dyn-error?style=for-the-badge&logo=rust&color=forestgreen)](https://crates.io/crates/dyn-error)
 
 This crate provides error-related utilities.
 
