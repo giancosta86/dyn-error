@@ -2,8 +2,7 @@
 
 _Error-related utilites for Rust_
 
-[![CI](https://github.com/giancosta86/dyn-error/actions/workflows/publish-to-crates.yml/badge.svg)](https://github.com/giancosta86/dyn-error/actions/workflows/publish-to-crates.yml)
-![Crates.io Version](https://img.shields.io/crates/v/dyn-error?style=flat&logo=rust)
+[![Crates.io Version](https://img.shields.io/crates/v/dyn-error?style=for-the-badge&logo=rust&color=forestgreen)](https://crates.io/crates/dyn-error)
 
 This crate provides error-related utilities.
 
@@ -25,10 +24,11 @@ impl Display for MyErr {
 
 impl Error for MyErr {}
 
-fn main() {
+fn main() -> Result<(), Box<dyn Error>> {
     let result: Result<String, Box<dyn Error>> = Err(Box::new(MyErr(90)));
 
     assert_err_box!(result, MyErr(90));
+    Ok(())
 }
 ```
 
@@ -56,7 +56,7 @@ impl Error for MyErr {}
 //
 // Test scenarios
 //
-fn main() {
+fn main() -> Result<(), Box<dyn Error>> {
     let result: Result<String, Box<dyn Error>> = Err(Box::new(MyErr(90)));
     assert_eq!(check_err_box(result, MyErr(90)), Ok(()));
 
@@ -68,6 +68,8 @@ fn main() {
             actual: "Custom error: 90".to_string()
         })
     );
+
+    Ok(())
 }
 ```
 

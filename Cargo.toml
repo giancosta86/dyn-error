@@ -1,6 +1,6 @@
 [package]
 name = "dyn-error"
-version = "0.2.1"
+version = "0.0.0"
 authors = ["Gianluca Costa <gianluca@gianlucacosta.info>"]
 edition = "2021"
 description = "Error-related utilites for Rust"
@@ -16,9 +16,3 @@ include = [
     "/src/",
     "/tests/",
 ]
-
-[dev-dependencies]
-speculate2 = "0.2"
-
-[package.metadata.docs.rs]
-all-features = true
