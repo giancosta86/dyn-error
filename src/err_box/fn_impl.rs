@@ -6,7 +6,7 @@ use std::error::Error;
 /// equal to the *expected* instance:
 ///
 /// * If the equality check succeeds, just returns [Ok] with
-/// a no-op `()` value;
+///   a no-op `()` value;
 ///
 /// * otherwise, returns [Err] - with a descriptive [ErrBoxCheckFailure].
 ///
