@@ -25,10 +25,11 @@ impl Display for MyErr {
 
 impl Error for MyErr {}
 
-fn main() {
+fn main() -> Result<(), Box<dyn Error>> {
     let result: Result<String, Box<dyn Error>> = Err(Box::new(MyErr(90)));
 
     assert_err_box!(result, MyErr(90));
+    Ok(())
 }
 ```
 
@@ -56,7 +57,7 @@ impl Error for MyErr {}
 //
 // Test scenarios
 //
-fn main() {
+fn main() -> Result<(), Box<dyn Error>> {
     let result: Result<String, Box<dyn Error>> = Err(Box::new(MyErr(90)));
     assert_eq!(check_err_box(result, MyErr(90)), Ok(()));
 
@@ -68,6 +69,8 @@ fn main() {
             actual: "Custom error: 90".to_string()
         })
     );
+
+    Ok(())
 }
 ```
 
